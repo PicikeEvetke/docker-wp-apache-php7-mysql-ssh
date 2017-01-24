@@ -1,7 +1,7 @@
 # Wordpress 4.7.1 alap telepítés
 FROM ubuntu
 MAINTAINER Szivós Tamás <szivos.tamas@it-droid.hu>
-LABEL Description="Wordpress 4.7.1 alap telepítése nginx, php7.0, mysql, ssh és supervisor csomagokkal" Vendor="Adalon Solutions Kft." Version="1.0"
+LABEL Description="Wordpress 4.7.1 alap telepítése apache2, php7.0, mysql, ssh és supervisor csomagokkal" Vendor="Adalon Solutions Kft." Version="1.0"
 
 # Néhány előkészület a telepítéshez
 RUN dpkg-divert --local --rename --add /sbin/initctl 
