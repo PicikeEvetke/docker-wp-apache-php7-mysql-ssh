@@ -40,7 +40,7 @@ RUN sed -i "s/PermitRootLogin without-password/PermitRootLogin yes/" /etc/ssh/ss
 RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/explicit_defaults_for_timestamp = true\nbind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
 
 # Wordpress virtualhost felmásolása
-COPY wordpress.conf /etc/apache2/sites-available/wordpress.conf
+COPY wordpress.apache2.conf /etc/apache2/sites-available/wordpress.conf
 RUN a2dissite 000-default
 RUN a2ensite wordpress
 RUN a2enmod rewrite expires
